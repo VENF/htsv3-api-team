@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import User, { IUser } from '../model/user.model';
 import { Crud } from "../../../classes"
 import { config } from '../../../config/config';
+import { createCreditCard } from "../../credit/controllers/credit.controllers"
 import jwt from 'jsonwebtoken';
 
 function createToken(user: IUser) {
@@ -25,6 +26,7 @@ export const signup = async (req: Request, res: Response) => {
         });
       } else {
         const newUser: IUser = new User(req.body);
+        createCreditCard(newUser._id)
         await newUser.save();
         return res.status(201).json({
           msg: 'User has been created successfully'
