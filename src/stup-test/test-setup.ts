@@ -36,7 +36,7 @@ class SetupTest implements ISetupTest {
       try {
         await collection.drop();
       } catch (error) {
-        console.log(error);
+
       }
     }
   }
