@@ -6,6 +6,7 @@ import passportMiddleware from './middlewares/passport';
 // routes
 import { userPrivateRoutes, userRoutes } from './entities/users';
 import { repositoryRoutes } from "./entities/repository"
+import { teamsRoutes } from "./entities/Team"
  
 export class Server implements IServer {
   private server: Application;
@@ -33,6 +34,7 @@ export class Server implements IServer {
     this.server.use(userRoutes);
     this.server.use(userPrivateRoutes);
     this.server.use(repositoryRoutes);
+    this.server.use(teamsRoutes);
   }
   listen() {
     this.server.listen(this.server.get('port'));
