@@ -11,7 +11,8 @@
     "clean": "rimraf ./dist",
     "tests": "cross-env NODE_ENV=test npx jest --detectOpenHandles",
     "tw": "cross-env NODE_ENV=test npx jest --watchAll --detectOpenHandles",
-    "testsc": "cross-env NODE_ENV=test npx jest --coverage --detectOpenHandles"
+    "testsc": "cross-env NODE_ENV=test npx jest --coverage --detectOpenHandles",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "Victor Naranjo",

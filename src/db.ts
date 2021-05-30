@@ -6,9 +6,8 @@ const options: ConnectionOptions = {
   useNewUrlParser: true,
   useUnifiedTopology: true
 };
-const { MONGO_HOSTNAME, MONGO_PORT, MONGO_DB } = process.env;
 
-const url = `mongodb://${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}`;
+const url = process.env.MONGODB_URL_CONNECT || '';
 
 if (process.env.NODE_ENV === 'dev') {
   mongoose.connect(config.MONGODB_URI, options);
