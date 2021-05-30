@@ -7,7 +7,7 @@ const router = Router();
 router.get('/user', auth.private, user);
 router.get('/users', auth.private, getUsers);
 router.get('/user/:email', auth.private, getUser);
-router.get('/user/remove/:email', auth.private, deleteUser);
-router.post('/user/update/:email', auth.private, updateUser);
+router.delete('/user/remove/:email', auth.private, deleteUser);
+router.put('/user/update/:email', auth.private, updateUser);
 
 export default router;
