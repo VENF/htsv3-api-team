@@ -4,9 +4,8 @@ import bcrypt from 'bcrypt';
 export interface IUser extends Document {
   email: string;
   password: string;
-  name: string;
-  lastname: string;
   username: string;
+  repos: number;
   comparePassword: (password: string) => Promise<Boolean>;
 }
 
