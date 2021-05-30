@@ -4,7 +4,7 @@ import morgan from 'morgan';
 import passport from 'passport';
 import passportMiddleware from './middlewares/passport';
 // routes
-import { userPrivateRoutes, userRoutes } from './users';
+import { userPrivateRoutes, userRoutes } from './entities/users';
 
 export class Server implements IServer {
   private server: Application;

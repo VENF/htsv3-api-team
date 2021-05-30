@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { user } from '../controllers/verify.controller';
 import { getUsers, getUser, deleteUser, updateUser } from "../controllers/user.controller"
-import auth from '../../utils/private';
+import auth from '../../../utils/private';
 const router = Router();
 
 router.get('/user', auth.private, user);

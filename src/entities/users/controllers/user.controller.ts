@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import User, { IUser } from '../model/user.model';
-import { Crud } from "../../classes"
-import { config } from '../../config/config';
+import { Crud } from "../../../classes"
+import { config } from '../../../config/config';
 import jwt from 'jsonwebtoken';
 
 function createToken(user: IUser) {
